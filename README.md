@@ -17,14 +17,15 @@ commits to all 133,955 files.
 | Commit | [`fd4aeeb2ee4f`](https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb) (2026-10-07) |
 | Manifest | [`openai-math/manifest-2026-10-07.json`](openai-math/manifest-2026-10-07.json) |
 | Root payload hash | `0x19d9f7945074ac0e71b4864b4a00fb5e097b952677e52586bd37db121479a1bb` |
-| Root proposal | `ROOT_TXID` |
-| Block heights | `HEIGHT_RANGE` |
+| Root proposal | `0xb965c597e7c6f60713fe8d0f5511357559740f990706a6c673380fbad2b84023` |
+| Block heights | `117539..=117547` |
 | Domain | `math/openai-math` |
 | Records | 758 (757 units: 749 manuscript directories + 8 top-level items, plus 1 root) |
 | Per-paper proposal IDs | [`openai-math/anchor-state.json`](openai-math/anchor-state.json) |
+| Duplicate records | 294 identical extra copies of some records were created by a resubmission bug in the anchoring tool. Each entry in `anchor-state.json` points to the earliest copy and lists the later ones under `duplicates`. |
 
 The first public release (`adc7f1241b42`, 2026-10-06) is anchored by its root
-record: `ROOT_TXID_1006` ([manifest](openai-math/manifest-2026-10-06.json)). Its
+record: `0x62b9599cfbb86a1b621c2e4e7bb88be03c5f6846176a1f44a9444844ce1e3be6` ([manifest](openai-math/manifest-2026-10-06.json)). Its
 manifest holds the hash of every original manuscript, including the three that were
 later withdrawn.
 
@@ -50,8 +51,8 @@ You need git and Python 3, plus a Compute Substrate node for the on-chain step.
 
 ```bash
 git clone https://github.com/openai/math.git
-curl -LO https://raw.githubusercontent.com/GITHUB_OWNER/compute-substrate-anchors/main/openai-math/manifest-2026-10-07.json
-curl -LO https://raw.githubusercontent.com/GITHUB_OWNER/compute-substrate/main/anchor/verify_manifest.py
+curl -LO https://raw.githubusercontent.com/compute-substrate/compute-substrate-anchors/main/openai-math/manifest-2026-10-07.json
+curl -LO https://raw.githubusercontent.com/compute-substrate/compute-substrate/main/anchor/verify_manifest.py
 python3 verify_manifest.py --repo math --manifest manifest-2026-10-07.json
 ```
 
@@ -59,11 +60,11 @@ It recomputes every hash from git and prints the root payload hash. Then check t
 hash against the chain:
 
 ```bash
-curl -s http://<any-node>:8789/proposal/ROOT_TXID
+curl -s http://<any-node>:8789/proposal/0xb965c597e7c6f60713fe8d0f5511357559740f990706a6c673380fbad2b84023
 ```
 
 The `payload_hash` field should equal the root payload hash. The hash spec is in
-the [anchor README](https://github.com/GITHUB_OWNER/compute-substrate/blob/main/anchor/README.md).
+the [anchor README](https://github.com/compute-substrate/compute-substrate/blob/main/anchor/README.md).
 
 ### Respond to a specific manuscript
 
