@@ -91,3 +91,13 @@ Your review is then fixed on chain in its own right, and others can attest to it
 
 Nothing recorded here can be removed, including by us. Compute Substrate does not
 judge any of it; reading and weighing it is up to you.
+
+### Reviews
+
+| Review | Proposal |
+|---|---|
+| [Mechanical audit](openai-math/reviews/2026-10-14-mechanical-audit/) | [`0x720ae78a…6e71`](https://explorer.computesubstrate.org/proposal.html?id=0x720ae78acf16cb2b8f853917d5a9b0a8229a996a749bd5de185da9bae28a6e71) |
+| [Reference audit](openai-math/reviews/2026-10-14-reference-audit/) | [`0xf2fada7d…9985`](https://explorer.computesubstrate.org/proposal.html?id=0xf2fada7d55a92e6232f40af153fc5c2b363fc99402677341ac724bf2d4609985) |
+
+These are one participant's reviews. Anyone can publish their own in `math/openai-math/review`;
+the network, not this repo, is the record of what has been said.
